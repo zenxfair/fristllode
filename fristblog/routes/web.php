@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Sojibfrist;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +13,6 @@ use App\Http\Controllers\Sojibfrist;
 |
 */
 
-Route::get('/', [Sojibfrist::class, 'index'])->name('home');
-Route::get('/about', [Sojibfrist::class, 'about'])->name('about');
+Route::get('/', function () {
+    return view('welcome');
+});
